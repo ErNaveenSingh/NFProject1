@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NFProject1</string>
+    <string name="verification_demo_text">This is a trial so please register your phone number before verification.</string>
+    <string name="enter_verification_code_here">enter verification code here</string>
+    <string name="verify">Verify</string>
+    <string name="just_enter_an_indian_number_for_now">Just enter an Indian number for now</string>
+    <string name="send_verification_code">Send Verification Code</string>
+    <string name="_9876543210">9876543210</string>
+    <string name="payment_demo_text">PARAMETERS \nName: Naveen Singh \nPayment for: Groceries \n\nTotal: Rs. 25</string>
+</resources>
