@@ -135,34 +135,34 @@ public class PhoneNumberVerificationActivity extends AppCompatActivity implement
                     Log.d("TAG", "onErrorResponse: "+error.getLocalizedMessage());
                 }
             }){
-//                @Override
-//                protected Map<String, String> getParams() throws AuthFailureError {
-//                    Map<String, String> params = new HashMap<>();
-//                    params.put("From", "+919873358793");
-//                    params.put("To", "+91" + pNumber);
-//                    params.put("Body", "Hi, your verification code is "+mCurrentCode);
-//                    return super.getParams();
-//                }
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("From", "+14086457473");
+                    params.put("To", "+91" + pNumber);
+                    params.put("Body", "Hi, your verification code is "+mCurrentCode);
+                    return params;
+                }
 
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError {
                     Map<String, String> params = new HashMap<>();
-                    params.put("Authentication", base64EncodedCredentials);
-                    return super.getHeaders();
+                    params.put("Authorization", base64EncodedCredentials);
+                    return params;
                 }
 
-                @Override
-                public byte[] getBody() throws AuthFailureError {
-                    StringBuilder builder = new StringBuilder();
-                    builder.append("From=");
-                    builder.append("+919873358793");
-                    builder.append("&To=");
-                    builder.append("+91" + pNumber);
-                    builder.append("&Body=");
-                    builder.append("Hi, your verification code is "+mCurrentCode);
-
-                    return builder.toString().getBytes();
-                }
+//                @Override
+//                public byte[] getBody() throws AuthFailureError {
+//                    StringBuilder builder = new StringBuilder();
+//                    builder.append("From=");
+//                    builder.append("+14086457473");
+//                    builder.append("&To=");
+//                    builder.append("+91" + pNumber);
+//                    builder.append("&Body=");
+//                    builder.append("Hi, your verification code is "+mCurrentCode);
+//
+//                    return builder.toString().getBytes();
+//                }
             };
             mProgressDialog.show();
             VolleySingleton.getInstance(this).getRequestQueue().add(sr);
